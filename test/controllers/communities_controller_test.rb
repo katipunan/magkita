@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class CommunitiesControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should show community" do
+    community = communities(:one)
+    get community_url(community)
+    assert_response :success
+  end
 end
