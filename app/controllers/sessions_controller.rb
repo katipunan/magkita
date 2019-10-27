@@ -1,5 +1,5 @@
 class SessionsController < Clearance::SessionsController
 
-  layout "login"
+  layout "simple_form"
 
 end

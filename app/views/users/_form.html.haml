@@ -1,6 +1,10 @@
-.text-field
-  = form.label :email
-  = form.text_field :email, type: 'email'
-.password-field
-  = form.label :password
-  = form.password_field :password
+.text-field.mb-4
+  = form.label :email, class: "label"
+  = form.text_field :email, type: 'email', class: "input"
+.password-field.mb-6
+  = form.label :password, class: "label"
+  = form.password_field :password, class: "input"
+.submit-field.mb-4
+  = form.submit nil, class: "btn btn-blue"
+.other-links
+  = link_to t(".sign_in"), sign_in_path, class: "link-blue text-sm"

@@ -1,8 +1,4 @@
-#clearance.sign-up
-  %h2= t(".title")
-  = form_for @user do |form|
-    = render partial: '/users/form', object: form
-    .submit-field
-      = form.submit
-    .other-links
-      = link_to t(".sign_in"), sign_in_path
+.flex.justify-center.py-10
+  .w-full.max-w-xs
+    = form_for @user, html: { class: "bg-white shadow-md rounded px-8 pt-6 pb-8" } do |form|
+      = render partial: '/users/form', object: form

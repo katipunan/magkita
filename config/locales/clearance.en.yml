@@ -58,6 +58,7 @@ en:
     new:
       title: Sign in
   users:
+    form:
+      sign_in: Already a member? Sign in
     new:
-      sign_in: Sign in
       title: Sign up
