@@ -9,12 +9,7 @@
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    - if signed_in?
-      Signed in as:
-      = current_user.email
-      = button_to t(".sign_out"), sign_out_path, method: :delete
-    - else
-      = link_to t(".sign_in"), sign_in_path
+    = render partial: 'navbar'
 
     #flash
       - flash.each do |key, value|

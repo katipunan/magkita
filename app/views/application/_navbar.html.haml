@@ -1,0 +1,19 @@
+%nav.flex.items-center.justify-between.flex-wrap.bg-red-600.p-6.text-gray-100
+  .flex.items-center.flex-shrink-0.mr-6
+    .text-xl.font-semibold
+      = link_to t('site.title'), root_path
+  .w-full{class: 'block flex-grow lg:flex lg:items-center lg:w-auto'}
+    .text-sm.lg:flex-grow
+      .inline-block.mt-0.mr-4
+        Communities
+      .inline-block.mt-0.mr-4
+        Events
+    .text-sm
+      - if signed_in?
+        .inline-block.mr-4
+          Signed in as:
+          = current_user.email
+        .inline-block
+          = link_to t(".sign_out"), sign_out_path, method: :delete
+      - else
+        = link_to t(".sign_in"), sign_in_path, class: 'inline-block'
