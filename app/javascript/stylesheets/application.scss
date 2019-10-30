@@ -37,3 +37,7 @@
 .btn-blue:focus {
   @apply outline-none shadow-outline;
 }
+
+.flash_notice {
+  @apply bg-orange-100 border-orange-500 text-orange-700;
+}

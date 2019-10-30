@@ -9,8 +9,10 @@
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body.bg-gray-200
-    #flash
-      - flash.each do |key, value|
-        %div{:class => ['flash', key]}=h value
+    .flex.justify-center.py-10
+      .w-full.max-w-xs
+        - flash.each do |key, value|
+          .border-l-4.text-sm.font-bold.p-4.mb-2{role: "alert", class: "flash_#{key}"}
+            %p=h value
 
-    = yield
+        = yield

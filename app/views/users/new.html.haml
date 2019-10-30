@@ -1,4 +1,2 @@
-.flex.justify-center.py-10
-  .w-full.max-w-xs
-    = form_for @user, html: { class: "bg-white shadow-md rounded px-8 pt-6 pb-8" } do |form|
-      = render partial: '/users/form', object: form
+= form_for @user, html: { class: "bg-white shadow-md rounded px-8 pt-6 pb-8" } do |form|
+  = render partial: '/users/form', object: form
