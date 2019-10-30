@@ -1,24 +1,7 @@
-# README
+# Magkita
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## License
 
-Things you may want to cover:
+This software is licensed under the [Apache License 2.0][license].
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[license]: https://github.com/katipunan/magkita/blob/master/LICENSE
