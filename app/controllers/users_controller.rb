@@ -2,7 +2,7 @@
 
 class UsersController < Clearance::UsersController
 
-  layout "simple_form"
+  layout 'simple_form'
 
   private
 
