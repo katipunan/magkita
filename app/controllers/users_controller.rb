@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class UsersController < Clearance::UsersController
-
   layout 'simple_form'
 
   private
@@ -17,5 +16,4 @@ class UsersController < Clearance::UsersController
       user.password_confirmation = password_confirmation
     end
   end
-
 end

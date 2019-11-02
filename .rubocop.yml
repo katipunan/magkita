@@ -8,6 +8,9 @@ AllCops:
 Bundler/OrderedGems:
   Enabled: false
 
+Layout/AlignArguments:
+  EnforcedStyle: with_fixed_indentation
+
 Style/ClassAndModuleChildren:
   Enabled: false
 
