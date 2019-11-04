@@ -32,3 +32,20 @@
 en:
   site:
     title: Magkita
+
+  actions: Actions
+  show: Show
+  edit: Edit
+  delete: Delete
+  are_you_sure: Are you sure?
+
+  admin:
+    communities:
+      index:
+        title: Listing Communities
+        new_link: New Community
+        no_records: No Communities
+      new:
+        title: New Community
+      edit:
+        title: Edit Community

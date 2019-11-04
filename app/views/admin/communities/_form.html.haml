@@ -1,0 +1,9 @@
+= form_with model: [:admin, community], local: true do |form|
+  .text-field.mb-4
+    = form.label :name, class: 'label'
+    = form.text_field :name, class: 'input'
+  .text-field.mb-4
+    = form.label :description, class: 'label'
+    = form.text_area :description, class: 'input'
+  .submit-field
+    = form.submit nil, class: 'btn btn-blue'

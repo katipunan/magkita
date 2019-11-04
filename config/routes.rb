@@ -16,6 +16,10 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
+  namespace :admin do
+    resources :communities, except: :show
+  end
+
   resources :communities, only: :show
 
   root 'welcome#index'
