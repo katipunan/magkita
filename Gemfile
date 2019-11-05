@@ -14,6 +14,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'haml-rails', '~> 2.0'
 gem 'clearance'
+gem 'kaminari'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 

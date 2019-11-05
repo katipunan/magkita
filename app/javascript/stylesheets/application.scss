@@ -38,6 +38,30 @@
   @apply outline-none shadow-outline;
 }
 
+.page-btn {
+  @apply border border-gray-500 text-gray-800 py-1 px-3 rounded;
+}
+
+.page-btn.is-current {
+  @apply bg-blue-500 text-gray-100 border-transparent;
+}
+
+.page-btn.is-disabled {
+  @apply bg-gray-200 text-gray-400 border-transparent;
+}
+
+.page-btn:hover {
+  @apply border-gray-700;
+}
+
+.page-btn.is-current:hover {
+  @apply border-transparent;
+}
+
+.page-btn.is-disabled:hover {
+  @apply border-transparent;
+}
+
 .flash_notice {
   @apply bg-orange-100 border-orange-500 text-orange-700;
 }

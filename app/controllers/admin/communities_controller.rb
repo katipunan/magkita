@@ -2,7 +2,7 @@
 
 class Admin::CommunitiesController < ApplicationController
   def index
-    @communities = Community.all
+    @communities = Community.page(params[:page]).per(10)
   end
 
   def new

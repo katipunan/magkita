@@ -2,7 +2,7 @@
 
 = link_to t('.new_link'), new_admin_community_path, class: "link-blue"
 
-- if @communities.count > 0
+- if @communities.total_count > 0
 
   %table.table-auto.table.is-bordered.is-striped
     %thead
@@ -21,6 +21,8 @@
               = link_to t('show'), community, class: 'link-blue'
               = link_to t('edit'), edit_admin_community_path(community), class: 'link-blue'
               = link_to t('delete'), admin_community_path(community), method: :delete, data: { confirm: t('are_you_sure') }, class: 'link-blue'
+
+  = paginate @communities
 
 - else
 
