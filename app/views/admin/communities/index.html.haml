@@ -17,10 +17,16 @@
           %td= community.name
           %td= truncate(community.description, length: 80)
           %td
-            .actions
-              = link_to t('show'), community, class: 'link-blue'
-              = link_to t('edit'), edit_admin_community_path(community), class: 'link-blue'
-              = link_to t('delete'), admin_community_path(community), method: :delete, data: { confirm: t('are_you_sure') }, class: 'link-blue'
+            .actions.buttons
+              = link_to community, class: 'icon-btn' do
+                %span.icon{ title: t('show') }
+                  %i.far.fa-eye
+              = link_to edit_admin_community_path(community), class: 'icon-btn' do
+                %span.icon{ title: t('edit') }
+                  %i.far.fa-edit
+              = link_to admin_community_path(community), method: :delete, data: { confirm: t('are_you_sure') }, class: 'icon-btn' do
+                %span.icon{ title: t('delete') }
+                  %i.far.fa-trash-alt
 
   = paginate @communities
 

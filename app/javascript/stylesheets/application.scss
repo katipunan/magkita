@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+
 .label {
   @apply block text-gray-700 text-sm font-bold mb-2;
 }
@@ -36,6 +40,26 @@
 
 .btn-blue:focus {
   @apply outline-none shadow-outline;
+}
+
+.icon-btn {
+  @apply border border-gray-500 rounded inline-flex items-center;
+}
+
+.icon-btn:hover {
+  @apply border-gray-700;
+}
+
+.buttons .icon-btn:not(:last-child) {
+  @apply mr-2;
+}
+
+.icon-btn .icon {
+  @apply my-1 mx-2;
+}
+
+.icon-btn .icon i {
+  @apply text-gray-800;
 }
 
 .page-btn {
