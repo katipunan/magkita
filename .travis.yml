@@ -1,0 +1,27 @@
+language: ruby
+
+services:
+  - postgresql
+
+cache:
+  bundler: true
+  yarn: true
+  directories:
+    - node_modules
+    - /home/travis/.rvm/
+
+before_install:
+  - gem install bundler
+
+install:
+  - bundle install --deployment --jobs=3 --retry=3
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
+  - nvm install node
+  - node -v
+  - npm install yarn -g
+  - yarn
+  - bundle exec rails webpacker:compile
+
+script:
+  - bundle exec rails test
