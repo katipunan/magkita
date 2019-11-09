@@ -4,8 +4,8 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   setup do
-    @user = User.new(
-      email: 'user1@example.com',
+    @user = build(
+      :user,
       password: 'password123',
       password_confirmation: 'password123'
     )
