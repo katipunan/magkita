@@ -1,4 +1,7 @@
 .text-field.mb-4
+  = form.label :name, class: "label"
+  = form.text_field :name, class: "input"
+.text-field.mb-4
   = form.label :email, class: "label"
   = form.text_field :email, type: 'email', class: "input"
 .password-field.mb-4

@@ -11,6 +11,12 @@ class UserTest < ActiveSupport::TestCase
     )
   end
 
+  test 'must have name' do
+    @user.name = nil
+    refute @user.valid?, 'Saved user with no name'
+    assert_not @user.errors[:name].blank?, 'No validation error for name'
+  end
+
   test 'must have long password' do
     short_password = 'short12'
     @user.password = short_password

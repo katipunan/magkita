@@ -3,6 +3,7 @@
 class User < ApplicationRecord
   include Clearance::User
 
+  validates :name, presence: true
   validates :password,
     confirmation: {
       if: :require_password?
