@@ -49,3 +49,7 @@ en:
         title: New Community
       edit:
         title: Edit Community
+    users:
+      index:
+        title: Listing Users
+        no_records: No Users

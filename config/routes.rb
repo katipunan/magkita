@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :communities, except: :show
+    resources :users, only: [:index, :destroy]
   end
 
   resources :communities, only: :show
