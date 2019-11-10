@@ -40,4 +40,25 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.errors[:password_confirmation].blank?,
       'No validation error for password confirmation'
   end
+
+  test 'must have default role of member' do
+    user = User.new
+    assert user.member?
+    refute user.organizer?
+    refute user.admin?
+  end
+
+  test 'must be able to become an organizer' do
+    @user.role = 'organizer'
+    assert @user.organizer?
+    refute @user.member?
+    refute @user.admin?
+  end
+
+  test 'must be able to become admin' do
+    @user.role = 'admin'
+    assert @user.admin?
+    refute @user.member?
+    refute @user.organizer?
+  end
 end
