@@ -3,6 +3,8 @@
 class User < ApplicationRecord
   include Clearance::User
 
+  enum role: [:member, :organizer, :admin]
+
   validates :name, presence: true
   validates :password,
     confirmation: {
