@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Admin::CommunitiesController < ApplicationController
+class Admin::CommunitiesController < AdminController
   def index
     @communities = Community.page(params[:page]).per(10)
   end
