@@ -3,3 +3,10 @@ member:
   email: john.doe@example.com
   encrypted_password: <%= BCrypt::Password.create('password123', cost: 4) %>
   remember_token: <%= Clearance::Token.new %>
+
+admin:
+  name: Admin
+  email: admin@example.com
+  encrypted_password: <%= BCrypt::Password.create('password123', cost: 4) %>
+  remember_token: <%= Clearance::Token.new %>
+  role: admin
