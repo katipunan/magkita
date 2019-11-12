@@ -8,8 +8,15 @@ class Admin::UsersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to sign_in_path
   end
 
-  test 'should get index when logged in' do
+  test 'should not get index when logged in as member' do
     user = users(:member)
+    assert_raises(Pundit::NotAuthorizedError) do
+      get admin_users_url(as: user)
+    end
+  end
+
+  test 'should get index when logged in as admin' do
+    user = users(:admin)
     get admin_users_url(as: user)
     assert_response :success
   end
